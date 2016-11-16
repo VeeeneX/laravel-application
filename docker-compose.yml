@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+  laravel-application:
+    build: ./docker/laravel-application
+    container_name: laravel-application
+    volumes:
+      - .:/app
+    networks:
+      - laravel-application
+
+  laravel-application-nginx:
+    build: ./docker/laravel-application-nginx
+    container_name: laravel-application-nginx
+    volumes_from:
+      - laravel-application
+    networks:
+      - laravel-application
+
+networks:
+  laravel-application:

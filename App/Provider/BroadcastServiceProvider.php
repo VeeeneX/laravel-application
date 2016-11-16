@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace App\Provider;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;
